@@ -32,6 +32,9 @@ public function index()
  */
 public function fetchMessages()
 {
+ 
+  // $messages = Message::where('user_id','=',2)->get();
+  // return $messages;
   return Message::with('user')->get();
 }
 
